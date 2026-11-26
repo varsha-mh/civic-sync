@@ -24,7 +24,7 @@ export default function Auth({ register = false, admin = false }) {
       <label>Email<input type="email" name="email" value={form.email} onChange={change} required placeholder="you@example.com"/></label><label>Password<input type="password" name="password" value={form.password} onChange={change} required minLength="8" placeholder="At least 8 characters"/></label>
       {error && <div className="error">{error}</div>}<button className="primary full" disabled={busy}>{busy ? 'Please wait...' : register ? 'Create account' : 'Log in'}</button>
       {!admin && <div className="auth-switch">{register ? 'Already have an account?' : 'New here?'} <Link to={register ? '/login' : '/register'}>{register ? 'Log in' : 'Create an account'}</Link></div>}
-      {!admin && <div className="auth-switch"><Link to="/department-login">Department login</Link></div>}
+      
       <small className="auth-foot">Your city. Your voice. A shared responsibility.</small>
     </form></section></div>;
 }
